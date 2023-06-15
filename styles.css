@@ -55,6 +55,82 @@ header ul a {
 }
 
 main {
-    background-color: #363;
+    position:relative;
+    /* background-color: #363; */
     height: 100dvh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.parallax {
+    pointer-events: none;
+    transition: 0.45s cubic-bezier(.2,.49,.32,.99);
+}
+
+.background {
+    position: absolute;
+    width: 1800px;
+    top: calc(50%);
+    left: calc(50%);
+    z-index: 1;
+}
+.clouds {
+    position: absolute;
+    width: 1000px;
+    top: calc(80%);
+    left: calc(50%);
+    z-index: 2;
+    
+}
+.wenus {
+    position: absolute;
+    width: 500px;
+    top: 50%;
+    left: 20%;
+    z-index: 3;
+}
+
+.text {
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    z-index: 9;
+    text-align: center;
+    text-transform: uppercase;
+    pointer-events: auto;
+}
+
+.text h1 {
+    font-weight: 800;
+    font-size: 6rem;
+}
+
+.earth {
+    position: absolute;
+    width: 450px;
+    top: 70%;
+    left: 80%;
+    z-index: 4;
+}
+
+.mars {
+    position: absolute;
+    width: 700px;
+    top: 50%;
+    left: 60%;
+    z-index: 5;
+}
+
+.vignette {
+    position: absolute; 
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(ellipse at center,
+     rgba(0,0,0,0) 65%,
+     rgba(0,0,0,0.7));
+    pointer-events: none;
 }
